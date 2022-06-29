@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/pages/:page", to: "pages#about"
   root "pages#about", page: "home"
+
+  mount Lookbook::Engine, at: "/lookbook"
 end
